@@ -1209,9 +1209,14 @@ treemode._updateTreePath = function (pathNodes) {
   }
 
   function getName (node) {
-    return node.parent
-      ? ((node.parent.type === 'array') ? node.index : node.field)
-      : node.type
+    // Now it will show field name when it is set
+    if (!node.parent) {
+      if (node.field) {
+        return node.field;
+      }
+      return node.type;
+    }
+    return (node.parent.type === 'array') ? node.index : node.field;
   }
 }
 
