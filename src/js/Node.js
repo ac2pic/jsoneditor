@@ -150,14 +150,12 @@ export class Node {
    * Get node serializable name
    * @returns {String|Number}
    */
-  getName() {
-    // Modified: Now root nodes will show field
-    if (!this.parent) {
-      return this.field ? this.field : undefined;
-    }
-    return (this.parent.type !== 'array')
+  getName () {
+    return !this.parent
+      ? undefined // do not add an (optional) field name of the root node
+      : (this.parent.type !== 'array')
         ? this.field
-        : this.index;
+        : this.index
   }
 
   /**
