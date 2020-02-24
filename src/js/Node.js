@@ -151,6 +151,7 @@ export class Node {
    * @returns {String|Number}
    */
   getName() {
+    // Modified: Now root nodes will show field
     if (!this.parent) {
       return this.field ? this.field : undefined;
     }
