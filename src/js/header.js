@@ -22,7 +22,8 @@
  * the License.
  *
  * Copyright (c) 2011-2020 Jos de Jong, http://jsoneditoronline.org
- *
+ * Copyright (c) 2020      ac2pic
+ * 
  * @author  Jos de Jong, <wjosdejong@gmail.com>
  * @version @@version
  * @date    @@date
